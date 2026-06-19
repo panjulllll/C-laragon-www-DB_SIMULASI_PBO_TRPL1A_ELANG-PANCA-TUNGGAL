@@ -26,12 +26,13 @@ class PendaftaranReguler extends Pendaftaran {
         $this->lokasiKampus = $lokasiKampus;
     }
 
+    // Overriding Method
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar + 500000;
+        return $this->biayaPendaftaranDasar;
     }
 
     public function tampilkanInfoJalur() {
-        return "Jalur Reguler - Prodi: {$this->pilihanProdi}, Kampus: {$this->lokasiKampus}";
+        return "Jalur Reguler - Prodi: {$this->pilihanProdi}, Lokasi: {$this->lokasiKampus}";
     }
 
     public function getDaftarReguler($db) {
